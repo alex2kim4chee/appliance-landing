@@ -68,7 +68,7 @@ li::before {
   top: 0.5em;
   width: 0.5rem;
   height: 0.5rem;
-  background-color: #10b981; /* зеленый (emerald) */
+  background-color: #fbbf24; /* зеленый (emerald) */
   border-radius: 9999px;
 }
 blockquote {
