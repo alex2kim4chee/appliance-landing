@@ -1,14 +1,26 @@
-
 * {
   box-sizing: border-box;
 }
-body {
+html, body {
+  height: 100%;
+  margin: 0;
   font-family: 'Inter', sans-serif;
   background: #f9fafb;
   color: #111827;
-  margin: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 2rem;
-  line-height: 1.6;
+}
+#container {
+  max-width: 700px;
+  width: 100%;
+  background: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 h1 {
   font-size: 2rem;
@@ -39,17 +51,10 @@ blockquote {
   font-style: italic;
   color: #0c4a6e;
 }
-#container {
-  max-width: 700px;
-  margin: auto;
-  background: white;
-  padding: 2rem;
-  border-radius: 0.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
 @media (max-width: 600px) {
   body {
     padding: 1rem;
+    align-items: flex-start;
   }
   h1 {
     font-size: 1.5rem;
