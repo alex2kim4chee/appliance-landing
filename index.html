@@ -1,31 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Appliance Repair Services</title>
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Main stylesheet with versioning -->
   <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
-  <h1 id="page-title">Home Appliance Repair</h1>
-  <p id="user-location" style="text-align: center; margin-top: -15px; margin-bottom: 15px; font-size: 1rem; color: #6b7280;"></p>
-  <div id="phone-block" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 30px; flex-wrap: wrap; text-align: center;">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="#0f172a" width="20" height="20" viewBox="0 0 24 24">
-    <path d="M21 16.5v4a2.5 2.5 0 01-2.7 2.5A19.9 19.9 0 013 4.7 2.5 2.5 0 015.5 2h4a1 1 0 011 0.8l1 4a1 1 0 01-.3 1l-2.2 2.2a15.9 15.9 0 006.5 6.5l2.2-2.2a1 1 0 011-.3l4 1a1 1 0 01.8 1z"/>
-  </svg>
-  <a href="tel:3053353501" style="font-size: 1.2rem; color: #0f172a; text-decoration: none;">
-    (305) 335-3501
-  </a>
-</div>
-  <div id="container">
+  <header>
+    <h1 id="page-title">Home Appliance Repair</h1>
+    <!-- Отображение города пользователя -->
+    <p id="user-location" style="text-align: center; margin-top: -15px; margin-bottom: 15px; font-size: 1rem; color: #6b7280;">
+      Service available in your area
+    </p>
+    <!-- Блок с телефоном -->
+    <div id="phone-block" style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 30px; flex-wrap: wrap; text-align: center;">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="#0f172a" width="20" height="20" viewBox="0 0 24 24">
+        <path d="M21 16.5v4a2.5 2.5 0 01-2.7 2.5A19.9 19.9 0 013 4.7 2.5 2.5 0 015.5 2h4a1 1 0 011 0.8l1 4a1 1 0 01-.3 1l-2.2 2.2a15.9 15.9 0 006.5 6.5l2.2-2.2a1 1 0 011-.3l4 1a1 1 0 01.8 1z"/>
+      </svg>
+      <a href="tel:3053353501" style="font-size: 1.2rem; color: #0f172a; text-decoration: none;">
+        (305) 335-3501
+      </a>
+    </div>
+  </header>
+  <main id="container">
+    <!-- Контейнер для динамического контента (услуги и отзывы) -->
     <div id="dynamic-content">
       <h1>Loading service information...</h1>
     </div>
-  </div>
-  </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 Home Appliance Repair. All rights reserved.</p>
+  </footer>
+  <!-- Подключение обновленного скрипта -->
   <script src="script.js"></script>
 </body>
 </html>

@@ -53,14 +53,12 @@ ul {
   padding-left: 1.5rem;
   list-style: none;
 }
-
 li {
   position: relative;
   padding-left: 1.25rem;
   margin-bottom: 0.5rem;
   color: #374151;
 }
-
 li::before {
   content: "";
   position: absolute;
@@ -68,7 +66,7 @@ li::before {
   top: 0.5em;
   width: 0.5rem;
   height: 0.5rem;
-  background-color: #fbbf24; /* зеленый (emerald) */
+  background-color: #fbbf24;
   border-radius: 9999px;
 }
 blockquote {
@@ -81,7 +79,7 @@ blockquote {
 }
 @media (max-width: 600px) {
   body {
-    padding: 1rem;    
+    padding: 1rem;
   }
   h1 {
     font-size: 1.5rem;
@@ -90,6 +88,8 @@ blockquote {
     font-size: 1.25rem;
   }
 }
+
+/* Wrapper for reviews + buttons */
 .reviews-wrapper {
   position: relative;
   display: flex;
@@ -99,7 +99,8 @@ blockquote {
   margin-top: 1rem;
 }
 
-.reviews-carousel {
+/* Container for review cards */
+.reviews-container {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -112,10 +113,10 @@ blockquote {
   scrollbar-color: #d1d5db transparent;
 }
 
-.reviews-carousel::-webkit-scrollbar {
+.reviews-container::-webkit-scrollbar {
   height: 6px;
 }
-.reviews-carousel::-webkit-scrollbar-thumb {
+.reviews-container::-webkit-scrollbar-thumb {
   background: #d1d5db;
   border-radius: 3px;
 }
@@ -124,7 +125,7 @@ blockquote {
   flex: 0 0 300px;
   scroll-snap-align: start;
   background: #ffffff;
-  border: 1px solid #e5e7eb; /* light gray border */
+  border: 1px solid #e5e7eb;
   border-radius: 0.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   padding: 1rem;
@@ -143,13 +144,13 @@ blockquote {
   margin-bottom: 0.25rem;
 }
 
-.author {
+author {
   font-style: italic;
   color: #6b7280;
   font-size: 0.875rem;
 }
 
-/* Стрелки прокрутки */
+/* Scroll buttons */
 .scroll-btn {
   position: absolute;
   top: 50%;
@@ -178,7 +179,6 @@ blockquote {
   right: 0;
 }
 
-/* Скрыть стрелки на мобильных */
 @media (max-width: 768px) {
   .scroll-btn {
     display: none;
