@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const res = await fetch('content.json');
   const data = await res.json();
 
-  let userCity = "your city";
+  let userCity = "your city"; // default
   try {
     const locRes = await fetch("https://ipapi.co/json/");
     const locData = await locRes.json();
@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   const container = document.getElementById('dynamic-content');
-
   for (const key in data) {
     if (kw.includes(key)) {
       const content = data[key];
@@ -24,19 +23,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         <p>${content.subtitle.replace("your area", userCity)}</p>
 
         <h2>Common Problems:</h2>
-        <div class="issues-wrapper">
-          <button class="scroll-btn left issues-left" aria-label="Scroll left">‹</button>
-          <div class="issues-carousel" id="issues-container">
-            ${content.issues.map(issue => `
-              <div class="issue-card">
-                <h3>${issue.problem}</h3>
-                <p>${issue.description}</p>
-                <div class="price">${issue.price}</div>
-              </div>
-            `).join('')}
-          </div>
-          <button class="scroll-btn right issues-right" aria-label="Scroll right">›</button>
-        </div>
+        <ul>${content.problems.map(p => `<li>${p}</li>`).join('')}</ul>
 
         <h2>Why Choose Us:</h2>
         <ul>${content.solutions.map(s => `<li>${s}</li>`).join('')}</ul>
@@ -50,7 +37,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       `;
       await loadReviews();
       setupScrollButtons();
-      setupIssueScrollButtons();
       return;
     }
   }
@@ -68,6 +54,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   setupScrollButtons();
 });
 
+// Загрузка отзывов из reviews.json и отображение карточек
 async function loadReviews() {
   try {
     const res = await fetch('reviews.json');
@@ -100,29 +87,18 @@ async function loadReviews() {
   }
 }
 
+// Управление прокруткой отзывов стрелками
 function setupScrollButtons() {
-  const leftBtn = document.querySelector('.scroll-btn.left:not(.issues-left)');
-  const rightBtn = document.querySelector('.scroll-btn.right:not(.issues-right)');
+  const leftBtn = document.querySelector('.scroll-btn.left');
+  const rightBtn = document.querySelector('.scroll-btn.right');
   const container = document.getElementById('reviews-container');
+
   if (!leftBtn || !rightBtn || !container) return;
 
   leftBtn.addEventListener('click', () => {
     container.scrollBy({ left: -320, behavior: 'smooth' });
   });
-  rightBtn.addEventListener('click', () => {
-    container.scrollBy({ left: 320, behavior: 'smooth' });
-  });
-}
 
-function setupIssueScrollButtons() {
-  const leftBtn = document.querySelector('.scroll-btn.issues-left');
-  const rightBtn = document.querySelector('.scroll-btn.issues-right');
-  const container = document.getElementById('issues-container');
-  if (!leftBtn || !rightBtn || !container) return;
-
-  leftBtn.addEventListener('click', () => {
-    container.scrollBy({ left: -320, behavior: 'smooth' });
-  });
   rightBtn.addEventListener('click', () => {
     container.scrollBy({ left: 320, behavior: 'smooth' });
   });
