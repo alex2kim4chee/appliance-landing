@@ -29,9 +29,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         <ul>${content.solutions.map(s => `<li>${s}</li>`).join('')}</ul>
 
         <h2>Customer Reviews:</h2>
-        <div class="reviews-carousel" id="reviews-container"></div>
+        <div class="reviews-wrapper">
+          <button class="scroll-btn left" aria-label="Scroll left">‹</button>
+          <div class="reviews-carousel" id="reviews-container"></div>
+          <button class="scroll-btn right" aria-label="Scroll right">›</button>
+        </div>
       `;
-      await loadReviews(); // загрузка отзывов
+      await loadReviews();
+      setupScrollButtons();
       return;
     }
   }
@@ -39,8 +44,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   container.innerHTML = `
     <h1>Home Appliance Repair</h1>
     <p>Enter your service request to get matched with a local technician in ${userCity}.</p>
+    <div class="reviews-wrapper">
+      <button class="scroll-btn left" aria-label="Scroll left">‹</button>
+      <div class="reviews-carousel" id="reviews-container"></div>
+      <button class="scroll-btn right" aria-label="Scroll right">›</button>
+    </div>
   `;
   await loadReviews();
+  setupScrollButtons();
 });
 
 // Загрузка отзывов из reviews.json и отображение карточек
@@ -74,4 +85,21 @@ async function loadReviews() {
   } catch (err) {
     console.error('Failed to load reviews:', err);
   }
+}
+
+// Управление прокруткой отзывов стрелками
+function setupScrollButtons() {
+  const leftBtn = document.querySelector('.scroll-btn.left');
+  const rightBtn = document.querySelector('.scroll-btn.right');
+  const container = document.getElementById('reviews-container');
+
+  if (!leftBtn || !rightBtn || !container) return;
+
+  leftBtn.addEventListener('click', () => {
+    container.scrollBy({ left: -320, behavior: 'smooth' });
+  });
+
+  rightBtn.addEventListener('click', () => {
+    container.scrollBy({ left: 320, behavior: 'smooth' });
+  });
 }
