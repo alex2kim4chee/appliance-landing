@@ -1,0 +1,182 @@
+{
+  "refrigerator repair": {
+    "title": "Refrigerator Repair",
+    "subtitle": "Same-day technician visit in your area",
+    "problems": [
+      "Refrigerator is not cooling",
+      "Unusual noises or humming",
+      "Water leaking inside or outside"
+    ],
+    "solutions": [
+      "Certified local technicians",
+      "Original parts replacement",
+      "Warranty up to 12 months"
+    ],
+    "review": "Quick and reliable service! They fixed my fridge the same day. Highly recommended."
+  },
+  "washing machine repair": {
+    "title": "Washing Machine Repair",
+    "subtitle": "Fast and professional service you can trust",
+    "problems": [
+      "Washer won\u2019t drain or spin",
+      "Error codes on display",
+      "Leaking or shaking excessively"
+    ],
+    "solutions": [
+      "Free diagnostics with repair",
+      "Upfront flat pricing",
+      "Available 7 days a week"
+    ],
+    "review": "Excellent work! My washer is running like new again. Friendly technician and clear pricing."
+  },
+  "dryer repair": {
+    "title": "Dryer Repair",
+    "subtitle": "Quick dryer service with full warranty",
+    "problems": [
+      "Dryer not heating",
+      "Clothes remain wet",
+      "Burning smell or loud noise"
+    ],
+    "solutions": [
+      "Experienced dryer specialists",
+      "Genuine part replacement",
+      "Same-day appointments"
+    ],
+    "review": "Very professional service! They fixed my dryer within hours."
+  },
+  "dishwasher repair": {
+    "title": "Dishwasher Repair",
+    "subtitle": "Reliable dishwasher fixes without delays",
+    "problems": [
+      "Dishes not clean",
+      "Water not draining",
+      "Leaking or unusual noises"
+    ],
+    "solutions": [
+      "Certified and insured techs",
+      "Fixed pricing and warranty",
+      "All major brands supported"
+    ],
+    "review": "Dishwasher works great now! Clear process and no surprises."
+  },
+  "oven repair": {
+    "title": "Oven Repair",
+    "subtitle": "Trusted oven repair with genuine parts",
+    "problems": [
+      "Oven not heating evenly",
+      "Display not working",
+      "Gas smell or ignition issues"
+    ],
+    "solutions": [
+      "Gas/electric oven experts",
+      "Safety-focused service",
+      "Same-day repair option"
+    ],
+    "review": "They fixed my oven just in time for a holiday dinner \u2014 lifesavers!"
+  },
+  "cooktop repair": {
+    "title": "Cooktop Repair",
+    "subtitle": "Cooktop issues? We fix them fast and safe",
+    "problems": [
+      "Burners not igniting",
+      "Heating element not working",
+      "Cracked glass top"
+    ],
+    "solutions": [
+      "Electric and gas cooktop service",
+      "On-the-spot diagnostics",
+      "Warranty for all repairs"
+    ],
+    "review": "Highly recommend \u2014 my glass cooktop looks and works like new!"
+  },
+  "microwave repair": {
+    "title": "Microwave Repair",
+    "subtitle": "Expert microwave repair at your convenience",
+    "problems": [
+      "Microwave not heating",
+      "Sparks inside",
+      "Buttons not responding"
+    ],
+    "solutions": [
+      "Quick turnarounds",
+      "Fixes for built-in or countertop models",
+      "Certified local technicians"
+    ],
+    "review": "I thought I\u2019d have to replace it, but they fixed it in 30 minutes!"
+  },
+  "freezer repair": {
+    "title": "Freezer Repair",
+    "subtitle": "Keep your freezer cold \u2014 expert repair today",
+    "problems": [
+      "Freezer too warm",
+      "Frost build-up",
+      "Weird noises or leaks"
+    ],
+    "solutions": [
+      "Fast diagnosis and repair",
+      "OEM parts used only",
+      "Emergency service available"
+    ],
+    "review": "Same-day fix saved my frozen goods. Great service!"
+  },
+  "ice maker repair": {
+    "title": "Ice Maker Repair",
+    "subtitle": "No ice? We\u2019ll fix your ice maker today",
+    "problems": [
+      "Not making ice",
+      "Ice tastes or smells odd",
+      "Ice stuck in tray"
+    ],
+    "solutions": [
+      "Refrigerator and standalone models",
+      "Fast on-site service",
+      "Guaranteed parts and labor"
+    ],
+    "review": "Tech was prompt and fixed our ice machine on the spot!"
+  },
+  "garbage disposal repair": {
+    "title": "Garbage Disposal Repair",
+    "subtitle": "Get your disposal running smoothly again",
+    "problems": [
+      "Disposal won't turn on",
+      "Strange grinding noise",
+      "Bad smell or slow drain"
+    ],
+    "solutions": [
+      "Quick jam removal",
+      "Safe motor replacements",
+      "Expert inspection & repair"
+    ],
+    "review": "Now it runs quietly \u2014 and no smell! Great experience overall."
+  },
+  "range hood repair": {
+    "title": "Range Hood Repair",
+    "subtitle": "Ventilation issues? We fix all range hoods",
+    "problems": [
+      "Fan not working",
+      "No light",
+      "Poor suction or strange noise"
+    ],
+    "solutions": [
+      "Wall, island, and under-cabinet models",
+      "Fan/motor/light repair",
+      "Complete safety check"
+    ],
+    "review": "Very happy with the service \u2014 kitchen is fresh again!"
+  },
+  "wine cooler repair": {
+    "title": "Wine Cooler Repair",
+    "subtitle": "Keep your wine at the perfect temperature",
+    "problems": [
+      "Cooler not cooling",
+      "Temperature fluctuation",
+      "Lights or display issues"
+    ],
+    "solutions": [
+      "Silent cooling repair",
+      "Temperature sensor replacement",
+      "High-end model support"
+    ],
+    "review": "They saved my wine collection. Fast and friendly!"
+  }
+}
