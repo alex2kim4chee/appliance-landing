@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     const locRes = await fetch("https://ipapi.co/json/");
     const locData = await locRes.json();
     if (locData.city) userCity = locData.city;
+    const locationEl = document.getElementById('user-location');
+if (locationEl) {
+  locationEl.textContent = `Service available in ${userCity}`;
+}
   } catch (e) {
     console.warn("Geolocation failed or blocked.");
   }
