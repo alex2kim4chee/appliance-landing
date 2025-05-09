@@ -1,43 +1,77 @@
-
 document.addEventListener("DOMContentLoaded", async () => {
-    const params = new URLSearchParams(window.location.search);
-    const kw = (params.get('kw') || '').toLowerCase();
+  const params = new URLSearchParams(window.location.search);
+  const kw = (params.get('kw') || '').toLowerCase();
 
-    const res = await fetch('content.json');
-    const data = await res.json();
+  const res = await fetch('content.json');
+  const data = await res.json();
 
-    let userCity = "your city"; // default
-    try {
-        const locRes = await fetch("https://ipapi.co/json/");
-        const locData = await locRes.json();
-        if (locData.city) userCity = locData.city;
-    } catch (e) {
-        console.warn("Geolocation failed or blocked.");
+  let userCity = "your city"; // default
+  try {
+    const locRes = await fetch("https://ipapi.co/json/");
+    const locData = await locRes.json();
+    if (locData.city) userCity = locData.city;
+  } catch (e) {
+    console.warn("Geolocation failed or blocked.");
+  }
+
+  const container = document.getElementById('dynamic-content');
+  for (const key in data) {
+    if (kw.includes(key)) {
+      const content = data[key];
+      container.innerHTML = `
+        <h1>${content.title}</h1>
+        <p>${content.subtitle.replace("your area", userCity)}</p>
+
+        <h2>Common Problems:</h2>
+        <ul>${content.problems.map(p => `<li>${p}</li>`).join('')}</ul>
+
+        <h2>Why Choose Us:</h2>
+        <ul>${content.solutions.map(s => `<li>${s}</li>`).join('')}</ul>
+
+        <h2>Customer Reviews:</h2>
+        <div class="reviews-carousel" id="reviews-container"></div>
+      `;
+      await loadReviews(); // загрузка отзывов
+      return;
     }
+  }
 
-    const container = document.getElementById('dynamic-content');
-    for (const key in data) {
-        if (kw.includes(key)) {
-            const content = data[key];
-            container.innerHTML = `
-                <h1>${content.title}</h1>
-                <p>${content.subtitle.replace("your area", userCity)}</p>
-
-                <h2>Common Problems:</h2>
-                <ul>${content.problems.map(p => `<li>${p}</li>`).join('')}</ul>
-
-                <h2>Why Choose Us:</h2>
-                <ul>${content.solutions.map(s => `<li>${s}</li>`).join('')}</ul>
-
-                <h2>Customer Review:</h2>
-                <blockquote>${content.review}</blockquote>
-            `;
-            return;
-        }
-    }
-
-    container.innerHTML = `
-        <h1>Home Appliance Repair</h1>
-        <p>Enter your service request to get matched with a local technician in ${userCity}.</p>
-    `;
+  container.innerHTML = `
+    <h1>Home Appliance Repair</h1>
+    <p>Enter your service request to get matched with a local technician in ${userCity}.</p>
+  `;
+  await loadReviews();
 });
+
+// Загрузка отзывов из reviews.json и отображение карточек
+async function loadReviews() {
+  try {
+    const res = await fetch('reviews.json');
+    const reviews = await res.json();
+    const container = document.getElementById('reviews-container');
+    if (!container) return;
+
+    reviews.forEach(r => {
+      const card = document.createElement('div');
+      card.className = 'review-card';
+
+      const text = document.createElement('p');
+      text.textContent = `“${r.text}”`;
+
+      const stars = document.createElement('div');
+      stars.className = 'stars';
+      stars.textContent = '★'.repeat(r.stars);
+
+      const author = document.createElement('div');
+      author.className = 'author';
+      author.textContent = `— ${r.author}`;
+
+      card.appendChild(text);
+      card.appendChild(stars);
+      card.appendChild(author);
+      container.appendChild(card);
+    });
+  } catch (err) {
+    console.error('Failed to load reviews:', err);
+  }
+}
