@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     if (locData.city) userCity = locData.city;
     const locationEl = document.getElementById('user-location');
 if (locationEl) {
-  locationEl.textContent = `Service available in ${userCity} and surrounding areas`;
+  locationEl.textContent = `Service available in ${userCity} area`;
 }
   } catch (e) {
     console.warn("Geolocation failed or blocked.");
