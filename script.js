@@ -54,20 +54,37 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (matchedKey && data[matchedKey]) {
     const content = data[matchedKey];
+    // Hero Section
+    const imageUrl = content.image || 'default-hero.jpg';
     contentContainer.innerHTML = `
-      <h1>${content.title}</h1>
-      <p>${content.subtitle.replace("your area", userCity)}</p>
-      <h2>Common Problems</h2>
-      <ul>${content.problems.map(p => `<li>${p}</li>`).join('')}</ul>
-      <h2>Why Choose Us</h2>
-      <ul>${content.solutions.map(s => `<li>${s}</li>`).join('')}</ul>
-      <h2>Customer Reviews</h2>
-      <div class="reviews-wrapper">
-        <div id="reviews-container" class="reviews-container"></div>
-        <button class="scroll-btn left" aria-label="Scroll left">&lt;</button>
-        <button class="scroll-btn right" aria-label="Scroll right">&gt;</button>
-      </div>
+      <section class="hero" style="background-image: url('${imageUrl}');">
+        <div class="hero-overlay">
+          <h1>${content.title}</h1>
+          <p>Ready to get your ${content.title.replace(' repair','')} serviced today in ${userCity}? Book now!</p>
+          <button id="book-btn" class="book-btn">Book an Appointment</button>
+        </div>
+      </section>
+      <section class="service-details">
+        <h2>Common Problems</h2>
+        <ul>${content.problems.map(p => `<li>${p}</li>`).join('')}</ul>
+        <h2>Why Choose Us</h2>
+        <ul>${content.solutions.map(s => `<li>${s}</li>`).join('')}</ul>
+        <h2>Customer Reviews</h2>
+        <div class="reviews-wrapper">
+          <div id="reviews-container" class="reviews-container"></div>
+          <button class="scroll-btn left" aria-label="Scroll left">&lt;</button>
+          <button class="scroll-btn right" aria-label="Scroll right">&gt;</button>
+        </div>
+      </section>
     `;
+    // Setup booking button popup
+    document.getElementById('book-btn').addEventListener('click', () => {
+      window.open(
+        'https://docs.google.com/forms/d/e/FORM_ID/viewform',
+        'appointment',
+        'width=600,height=800,menubar=no,toolbar=no'
+      );
+    });
   } else {
     renderDefault();
   }
