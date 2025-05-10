@@ -32,7 +32,7 @@
   "dryer repair": {
     "title": "Dryer Repair",
     "subtitle": "Quick dryer service with full warranty",
-    "image": "https://example.com/images/dryer.jpg",
+    "image": "https://appliance-landing.pages.dev/images/dryer.webp",
     "problems": [
       "Dryer not heating",
       "Clothes remain wet",
