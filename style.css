@@ -5,9 +5,9 @@ html, body {
   height: 100%;
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #f9fafb;
-  color: #111827;
+  color: #111827;            /* оставляем только цвет текста */
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -16,9 +16,14 @@ body {
   padding: 4rem 2rem 2rem;
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
-  background: #f9fafb;
-  color: #111827;
   margin: 0;
+
+  /* сохраняем фон-оттенок, но через background-color, 
+     чтобы не затирать background-image */
+  background-color: #f9fafb;
+
+  /* «прилипший» фон */
+  background-attachment: fixed;
 }
 #page-title {
   font-family: 'Bebas Neue', sans-serif;
