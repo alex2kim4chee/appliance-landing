@@ -1,182 +1,182 @@
 {
-"refrigerator repair": {
-"title": "Refrigerator Repair",
-"subtitle": "Same-day technician visit in your area",
-"image": "[https://example.com/images/refrigerator.jpg](https://example.com/images/refrigerator.jpg)",
-"problems": \[
-"Refrigerator is not cooling",
-"Unusual noises or humming",
-"Water leaking inside or outside"
-],
-"solutions": \[
-"Certified local technicians",
-"Original parts replacement",
-"Warranty up to 12 months"
-]
-},
-"washing machine repair": {
-"title": "Washing Machine Repair",
-"subtitle": "Fast and professional service you can trust in your area",
-"image": "[https://example.com/images/washing-machine.jpg](https://example.com/images/washing-machine.jpg)",
-"problems": \[
-"Washer won’t drain or spin",
-"Error codes on display",
-"Leaking or shaking excessively"
-],
-"solutions": \[
-"Free diagnostics with repair",
-"Upfront flat pricing",
-"Available 7 days a week"
-]
-},
-"dryer repair": {
-"title": "Dryer Repair",
-"subtitle": "Quick dryer service with full warranty",
-"image": "[https://example.com/images/dryer.jpg](https://example.com/images/dryer.jpg)",
-"problems": \[
-"Dryer not heating",
-"Clothes remain wet",
-"Burning smell or loud noise"
-],
-"solutions": \[
-"Experienced dryer specialists",
-"Genuine part replacement",
-"Same-day appointments"
-]
-},
-"dishwasher repair": {
-"title": "Dishwasher Repair",
-"subtitle": "Reliable dishwasher fixes without delays",
-"image": "[https://example.com/images/dishwasher.jpg](https://example.com/images/dishwasher.jpg)",
-"problems": \[
-"Dishes not clean",
-"Water not draining",
-"Leaking or unusual noises"
-],
-"solutions": \[
-"Certified and insured techs",
-"Fixed pricing and warranty",
-"All major brands supported"
-]
-},
-"oven repair": {
-"title": "Oven Repair",
-"subtitle": "Trusted oven repair with genuine parts",
-"image": "[https://example.com/images/oven.jpg](https://example.com/images/oven.jpg)",
-"problems": \[
-"Oven not heating evenly",
-"Display not working",
-"Gas smell or ignition issues"
-],
-"solutions": \[
-"Gas/electric oven experts",
-"Safety-focused service",
-"Same-day repair option"
-]
-},
-"cooktop repair": {
-"title": "Cooktop Repair",
-"subtitle": "Cooktop issues? We fix them fast and safe",
-"image": "[https://example.com/images/cooktop.jpg](https://example.com/images/cooktop.jpg)",
-"problems": \[
-"Burners not igniting",
-"Heating element not working",
-"Cracked glass top"
-],
-"solutions": \[
-"Electric and gas cooktop service",
-"On-the-spot diagnostics",
-"Warranty for all repairs"
-]
-},
-"microwave repair": {
-"title": "Microwave Repair",
-"subtitle": "Expert microwave repair at your convenience",
-"image": "[https://example.com/images/microwave.jpg](https://example.com/images/microwave.jpg)",
-"problems": \[
-"Microwave not heating",
-"Sparks inside",
-"Buttons not responding"
-],
-"solutions": \[
-"Quick turnarounds",
-"Fixes for built-in or countertop models",
-"Certified local technicians"
-]
-},
-"freezer repair": {
-"title": "Freezer Repair",
-"subtitle": "Keep your freezer cold — expert repair today",
-"image": "[https://example.com/images/freezer.jpg](https://example.com/images/freezer.jpg)",
-"problems": \[
-"Freezer too warm",
-"Frost build-up",
-"Weird noises or leaks"
-],
-"solutions": \[
-"Fast diagnosis and repair",
-"OEM parts used only",
-"Emergency service available"
-]
-},
-"ice maker repair": {
-"title": "Ice Maker Repair",
-"subtitle": "No ice? We’ll fix your ice maker today",
-"image": "[https://example.com/images/ice-maker.jpg](https://example.com/images/ice-maker.jpg)",
-"problems": \[
-"Not making ice",
-"Ice tastes or smells odd",
-"Ice stuck in tray"
-],
-"solutions": \[
-"Refrigerator and standalone models",
-"Fast on-site service",
-"Guaranteed parts and labor"
-]
-},
-"garbage disposal repair": {
-"title": "Garbage Disposal Repair",
-"subtitle": "Get your disposal running smoothly again",
-"image": "[https://example.com/images/garbage-disposal.jpg](https://example.com/images/garbage-disposal.jpg)",
-"problems": \[
-"Disposal won't turn on",
-"Strange grinding noise",
-"Bad smell or slow drain"
-],
-"solutions": \[
-"Quick jam removal",
-"Safe motor replacements",
-"Expert inspection & repair"
-]
-},
-"range hood repair": {
-"title": "Range Hood Repair",
-"subtitle": "Ventilation issues? We fix all range hoods",
-"image": "[https://example.com/images/range-hood.jpg](https://example.com/images/range-hood.jpg)",
-"problems": \[
-"Fan not working",
-"No light",
-"Poor suction or strange noise"
-],
-"solutions": \[
-"Wall, island, and under-cabinet models",
-"Fan/motor/light repair",
-"Complete safety check"
-]
-},
-"wine cooler repair": {
-"title": "Wine Cooler Repair",
-"subtitle": "Keep your wine at the perfect temperature",
-"image": "[https://example.com/images/wine-cooler.jpg](https://example.com/images/wine-cooler.jpg)",
-"problems": \[
-"Cooler not cooling",
-"Temperature fluctuation",
-"Lights or display issues"
-],
-"solutions": \[
-"Silent cooling repair",
-"Temperature sensor replacement",
-"High-end model support"
-]
-}
+  "refrigerator repair": {
+    "title": "Refrigerator Repair",
+    "subtitle": "Same-day technician visit in your area",
+    "image": "https://example.com/images/refrigerator.jpg",
+    "problems": [
+      "Refrigerator is not cooling",
+      "Unusual noises or humming",
+      "Water leaking inside or outside"
+    ],
+    "solutions": [
+      "Certified local technicians",
+      "Original parts replacement",
+      "Warranty up to 12 months"
+    ]
+  },
+  "washing machine repair": {
+    "title": "Washing Machine Repair",
+    "subtitle": "Fast and professional service you can trust in your area",
+    "image": "https://example.com/images/washing-machine.jpg",
+    "problems": [
+      "Washer won’t drain or spin",
+      "Error codes on display",
+      "Leaking or shaking excessively"
+    ],
+    "solutions": [
+      "Free diagnostics with repair",
+      "Upfront flat pricing",
+      "Available 7 days a week"
+    ]
+  },
+  "dryer repair": {
+    "title": "Dryer Repair",
+    "subtitle": "Quick dryer service with full warranty",
+    "image": "https://example.com/images/dryer.jpg",
+    "problems": [
+      "Dryer not heating",
+      "Clothes remain wet",
+      "Burning smell or loud noise"
+    ],
+    "solutions": [
+      "Experienced dryer specialists",
+      "Genuine part replacement",
+      "Same-day appointments"
+    ]
+  },
+  "dishwasher repair": {
+    "title": "Dishwasher Repair",
+    "subtitle": "Reliable dishwasher fixes without delays",
+    "image": "https://example.com/images/dishwasher.jpg",
+    "problems": [
+      "Dishes not clean",
+      "Water not draining",
+      "Leaking or unusual noises"
+    ],
+    "solutions": [
+      "Certified and insured techs",
+      "Fixed pricing and warranty",
+      "All major brands supported"
+    ]
+  },
+  "oven repair": {
+    "title": "Oven Repair",
+    "subtitle": "Trusted oven repair with genuine parts",
+    "image": "https://example.com/images/oven.jpg",
+    "problems": [
+      "Oven not heating evenly",
+      "Display not working",
+      "Gas smell or ignition issues"
+    ],
+    "solutions": [
+      "Gas/electric oven experts",
+      "Safety-focused service",
+      "Same-day repair option"
+    ]
+  },
+  "cooktop repair": {
+    "title": "Cooktop Repair",
+    "subtitle": "Cooktop issues? We fix them fast and safe",
+    "image": "https://example.com/images/cooktop.jpg",
+    "problems": [
+      "Burners not igniting",
+      "Heating element not working",
+      "Cracked glass top"
+    ],
+    "solutions": [
+      "Electric and gas cooktop service",
+      "On-the-spot diagnostics",
+      "Warranty for all repairs"
+    ]
+  },
+  "microwave repair": {
+    "title": "Microwave Repair",
+    "subtitle": "Expert microwave repair at your convenience",
+    "image": "https://example.com/images/microwave.jpg",
+    "problems": [
+      "Microwave not heating",
+      "Sparks inside",
+      "Buttons not responding"
+    ],
+    "solutions": [
+      "Quick turnarounds",
+      "Fixes for built-in or countertop models",
+      "Certified local technicians"
+    ]
+  },
+  "freezer repair": {
+    "title": "Freezer Repair",
+    "subtitle": "Keep your freezer cold — expert repair today",
+    "image": "https://example.com/images/freezer.jpg",
+    "problems": [
+      "Freezer too warm",
+      "Frost build-up",
+      "Weird noises or leaks"
+    ],
+    "solutions": [
+      "Fast diagnosis and repair",
+      "OEM parts used only",
+      "Emergency service available"
+    ]
+  },
+  "ice maker repair": {
+    "title": "Ice Maker Repair",
+    "subtitle": "No ice? We’ll fix your ice maker today",
+    "image": "https://example.com/images/ice-maker.jpg",
+    "problems": [
+      "Not making ice",
+      "Ice tastes or smells odd",
+      "Ice stuck in tray"
+    ],
+    "solutions": [
+      "Refrigerator and standalone models",
+      "Fast on-site service",
+      "Guaranteed parts and labor"
+    ]
+  },
+  "garbage disposal repair": {
+    "title": "Garbage Disposal Repair",
+    "subtitle": "Get your disposal running smoothly again",
+    "image": "https://example.com/images/garbage-disposal.jpg",
+    "problems": [
+      "Disposal won't turn on",
+      "Strange grinding noise",
+      "Bad smell or slow drain"
+    ],
+    "solutions": [
+      "Quick jam removal",
+      "Safe motor replacements",
+      "Expert inspection & repair"
+    ]
+  },
+  "range hood repair": {
+    "title": "Range Hood Repair",
+    "subtitle": "Ventilation issues? We fix all range hoods",
+    "image": "https://example.com/images/range-hood.jpg",
+    "problems": [
+      "Fan not working",
+      "No light",
+      "Poor suction or strange noise"
+    ],
+    "solutions": [
+      "Wall, island, and under-cabinet models",
+      "Fan/motor/light repair",
+      "Complete safety check"
+    ]
+  },
+  "wine cooler repair": {
+    "title": "Wine Cooler Repair",
+    "subtitle": "Keep your wine at the perfect temperature",
+    "image": "https://example.com/images/wine-cooler.jpg",
+    "problems": [
+      "Cooler not cooling",
+      "Temperature fluctuation",
+      "Lights or display issues"
+    ],
+    "solutions": [
+      "Silent cooling repair",
+      "Temperature sensor replacement",
+      "High-end model support"
+    ]
+  }
 }
