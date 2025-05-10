@@ -53,22 +53,29 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   if (matchedKey && data[matchedKey]) {
-    const content = data[matchedKey];
-    // Hero Section
-    const imageUrl = content.image || 'default-hero.jpg';
+    const contentItem = data[matchedKey];
+    const imageUrl = contentItem.image || 'default-hero.jpg';
+
+    // Set body background
+    document.body.style.backgroundImage = `url('${imageUrl}')`;
+    document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundPosition = 'center';
+    document.body.style.backgroundRepeat = 'no-repeat';
+
+    // Render Hero section and service details
     contentContainer.innerHTML = `
-      <section class="hero" style="background-image: url('${imageUrl}');">
+      <section class="hero">
         <div class="hero-overlay">
-          <h1>${content.title}</h1>
-          <p>Ready to get your ${content.title.replace(' repair','')} serviced today in ${userCity}? Book now!</p>
+          <h1>${contentItem.title}</h1>
+          <p>Ready to get your ${contentItem.title.replace(' repair','')} serviced today in ${userCity}? Book now!</p>
           <button id="book-btn" class="book-btn">Book an Appointment</button>
         </div>
       </section>
       <section class="service-details">
         <h2>Common Problems</h2>
-        <ul>${content.problems.map(p => `<li>${p}</li>`).join('')}</ul>
+        <ul>${contentItem.problems.map(p => `<li>${p}</li>`).join('')}</ul>
         <h2>Why Choose Us</h2>
-        <ul>${content.solutions.map(s => `<li>${s}</li>`).join('')}</ul>
+        <ul>${contentItem.solutions.map(s => `<li>${s}</li>`).join('')}</ul>
         <h2>Customer Reviews</h2>
         <div class="reviews-wrapper">
           <div id="reviews-container" class="reviews-container"></div>
@@ -77,6 +84,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         </div>
       </section>
     `;
+
     // Setup booking button popup
     document.getElementById('book-btn').addEventListener('click', () => {
       window.open(
@@ -86,6 +94,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       );
     });
   } else {
+    // Reset body background if no match
+    document.body.style.backgroundImage = '';
     renderDefault();
   }
 
@@ -95,6 +105,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const reviews = await revRes.json();
     const reviewsContainer = document.getElementById('reviews-container');
     if (reviewsContainer) {
+      reviewsContainer.innerHTML = '';
       reviews.forEach(r => {
         const card = document.createElement('div');
         card.className = 'review-card';
@@ -134,7 +145,7 @@ function setupScrollButtons() {
 
 function renderDefault() {
   const contentContainer = document.getElementById('dynamic-content');
-  const defaultHTML = `
+  contentContainer.innerHTML = `
     <h1>Home Appliance Repair</h1>
     <p>We fix all types of appliances in ${document.getElementById('user-location')?.textContent || 'your area'}.</p>
     <div class="reviews-wrapper">
@@ -143,5 +154,4 @@ function renderDefault() {
       <button class="scroll-btn right" aria-label="Scroll right">&gt;</button>
     </div>
   `;
-  contentContainer.innerHTML = defaultHTML;
 }
