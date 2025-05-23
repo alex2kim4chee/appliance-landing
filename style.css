@@ -189,3 +189,46 @@ author {
     display: none;
   }
 }
+/* Wrapper + контейнер проблем */
+.problems-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  margin-top: 1rem;
+}
+.problems-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  max-width: 100%;
+  scroll-behavior: smooth;
+  /* стили скроллбара можно скопировать из .reviews-container */
+}
+.problem-card {
+  flex: 0 0 300px;
+  scroll-snap-align: start;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+/* на обеих — отзывы и проблемы */
+.scroll-btn.left-reviews,
+.scroll-btn.left-problems {
+  left: 0;
+}
+.scroll-btn.right-reviews,
+.scroll-btn.right-problems {
+  right: 0;
+}
+@media (max-width: 768px) {
+  .scroll-btn.left-reviews,
+  .scroll-btn.right-reviews,
+  .scroll-btn.left-problems,
+  .scroll-btn.right-problems {
+    display: none;
+  }
+}
