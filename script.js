@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-  // Mapping of content.json keys to possible aliases (without 'repair')
+  // Mapping of content keys to possible aliases (without 'repair')
   const keyAliases = {
     "refrigerator repair": ["refrigerator", "fridge", "fridges"],
     "washing machine repair": ["washing machine", "washing machines", "washer", "washers"],
@@ -19,17 +19,17 @@ document.addEventListener("DOMContentLoaded", async () => {
   const params = new URLSearchParams(window.location.search);
   const kw = (params.get('kw') || '').toLowerCase();
 
-  // Load content data
+  // Load detailed content data
   let data = {};
   try {
-    const res = await fetch('content.json');
+    const res = await fetch('full_appliance_repairs_detailed.json');
     data = await res.json();
   } catch (err) {
-    console.error('Error loading content.json', err);
+    console.error('Error loading full_appliance_repairs_detailed.json', err);
   }
 
   // Geolocation for user city
-  let userCity = "your city";
+  let userCity = 'your area';
   try {
     const locRes = await fetch("https://ipapi.co/json/");
     const locData = await locRes.json();
@@ -74,9 +74,19 @@ document.addEventListener("DOMContentLoaded", async () => {
       </section>
       <section class="service-details">
         <h2>Common Problems</h2>
-        <ul>${contentItem.problems.map(p => `<li>${p}</li>`).join('')}</ul>
+        <ul>
+          ${contentItem.problems.map(p => `
+            <li class="problem-item">
+              <strong>${p.issue}</strong>
+              <p>${p.causes}</p>
+              <p><em>Estimated cost:</em> ${p.costs.join(', ')}</p>
+            </li>
+          `).join('')}
+        </ul>
         <h2>Why Choose Us</h2>
-        <ul>${contentItem.solutions.map(s => `<li>${s}</li>`).join('')}</ul>
+        <ul>
+          ${contentItem.solutions.map(s => `<li>${s}</li>`).join('')}
+        </ul>
         <h2>Customer Reviews</h2>
         <div class="reviews-wrapper">
           <div id="reviews-container" class="reviews-container"></div>
@@ -94,40 +104,39 @@ document.addEventListener("DOMContentLoaded", async () => {
         'width=600,height=800,menubar=no,toolbar=no'
       );
     });
+
+    // Load and render reviews
+    try {
+      const revRes = await fetch('reviews.json');
+      const reviews = await revRes.json();
+      const reviewsContainer = document.getElementById('reviews-container');
+      if (reviewsContainer) {
+        reviewsContainer.innerHTML = '';
+        reviews.forEach(r => {
+          const card = document.createElement('div');
+          card.className = 'review-card';
+          const text = document.createElement('div');
+          text.className = 'text';
+          text.textContent = r.text;
+          const stars = document.createElement('div');
+          stars.className = 'stars';
+          stars.textContent = '★'.repeat(r.stars);
+          const author = document.createElement('div');
+          author.className = 'author';
+          author.textContent = `— ${r.author}`;
+          card.append(text, stars, author);
+          reviewsContainer.appendChild(card);
+        });
+        setupScrollButtons();
+      }
+    } catch (err) {
+      console.error('Failed to load reviews:', err);
+    }
+
   } else {
     // Reset body background if no match
     document.body.style.backgroundImage = '';
     renderDefault();
-  }
-
-  // Load and render reviews
-  try {
-    const revRes = await fetch('reviews.json');
-    const reviews = await revRes.json();
-    const reviewsContainer = document.getElementById('reviews-container');
-    if (reviewsContainer) {
-      reviewsContainer.innerHTML = '';
-      reviews.forEach(r => {
-        const card = document.createElement('div');
-        card.className = 'review-card';
-        const text = document.createElement('div');
-        text.className = 'text';
-        text.textContent = r.text;
-        const stars = document.createElement('div');
-        stars.className = 'stars';
-        stars.textContent = '★'.repeat(r.stars);
-        const author = document.createElement('div');
-        author.className = 'author';
-        author.textContent = `— ${r.author}`;
-        card.appendChild(text);
-        card.appendChild(stars);
-        card.appendChild(author);
-        reviewsContainer.appendChild(card);
-      });
-      setupScrollButtons();
-    }
-  } catch (err) {
-    console.error('Failed to load reviews:', err);
   }
 });
 
@@ -136,6 +145,7 @@ function setupScrollButtons() {
   const rightBtn = document.querySelector('.scroll-btn.right');
   const container = document.getElementById('reviews-container');
   if (!leftBtn || !rightBtn || !container) return;
+
   leftBtn.addEventListener('click', () => {
     container.scrollBy({ left: -320, behavior: 'smooth' });
   });

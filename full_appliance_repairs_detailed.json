@@ -1,0 +1,486 @@
+{
+  "refrigerator repair": {
+    "title": "Refrigerator Repair",
+    "subtitle": "Same-day technician visit in your area",
+    "image": "https://example.com/images/refrigerator.jpg",
+    "problems": [
+      {
+        "issue": "Refrigerator Not Cooling",
+        "causes": "Dirty condenser coils, faulty thermostat, malfunctioning evaporator fan motor, defective compressor, or control board failure.",
+        "costs": [
+          "Condenser coil cleaning: $70\u2013$130",
+          "Thermostat replacement: $100\u2013$400",
+          "Evaporator fan motor replacement: $250\u2013$400",
+          "Compressor replacement: $700\u2013$1,250",
+          "Control board replacement: $400\u2013$750"
+        ]
+      },
+      {
+        "issue": "Unusual Noises or Humming",
+        "causes": "Worn or damaged fan motor, loose mounting brackets, or failing compressor.",
+        "costs": [
+          "Fan motor replacement: $200\u2013$400",
+          "Tightening or minor adjustments: $100\u2013$150",
+          "Compressor replacement: $700\u2013$1,250"
+        ]
+      },
+      {
+        "issue": "Water Leaking Inside or Outside",
+        "causes": "Clogged or frozen defrost drain, cracked drip pan, leaking water inlet valve or supply line.",
+        "costs": [
+          "Defrost drain cleaning: $125\u2013$250",
+          "Drip pan replacement: $125\u2013$225",
+          "Water inlet valve replacement: $100\u2013$250",
+          "Water supply line repair: $140\u2013$550"
+        ]
+      }
+    ],
+    "solutions": [
+      "Certified local technicians",
+      "Original parts replacement",
+      "Warranty up to 12 months"
+    ]
+  },
+  "washing machine repair": {
+    "title": "Washing Machine Repair",
+    "subtitle": "Fast and professional service you can trust in your area",
+    "image": "https://example.com/images/washing-machine.jpg",
+    "problems": [
+      {
+        "issue": "Washer Won\u2019t Drain or Spin",
+        "causes": "Clogged drain pump, faulty lid switch, broken drive belt, or defective motor control board.",
+        "costs": [
+          "Drain pump replacement: $150\u2013$300",
+          "Lid switch replacement: $100\u2013$200",
+          "Drive belt replacement: $120\u2013$250",
+          "Motor or control board replacement: $250\u2013$450"
+        ]
+      },
+      {
+        "issue": "Error Codes on Display",
+        "causes": "Malfunctioning control board, sensor failure, or wiring issues.",
+        "costs": [
+          "Diagnostic fee: $80\u2013$150",
+          "Control board replacement: $250\u2013$450",
+          "Sensor replacement: $120\u2013$250",
+          "Wiring repair: $100\u2013$200"
+        ]
+      },
+      {
+        "issue": "Leaking or Shaking Excessively",
+        "causes": "Worn door gasket, unbalanced load, broken suspension rods, or faulty water inlet valve.",
+        "costs": [
+          "Door gasket replacement: $150\u2013$300",
+          "Suspension rods replacement: $200\u2013$400",
+          "Water inlet valve replacement: $100\u2013$250",
+          "Tub seal repair: $250\u2013$500"
+        ]
+      }
+    ],
+    "solutions": [
+      "Free diagnostics with repair",
+      "Upfront flat pricing",
+      "Available 7 days a week"
+    ]
+  },
+  "dryer repair": {
+    "title": "Dryer Repair",
+    "subtitle": "Quick dryer service with full warranty",
+    "image": "https://appliance-landing.pages.dev/images/dryer.webp",
+    "problems": [
+      {
+        "issue": "Dryer Not Heating",
+        "causes": "Blown thermal fuse, faulty heating element, defective thermostat, or bad control board.",
+        "costs": [
+          "Thermal fuse replacement: $100\u2013$180",
+          "Heating element replacement: $150\u2013$300",
+          "Thermostat replacement: $120\u2013$250",
+          "Control board replacement: $250\u2013$450"
+        ]
+      },
+      {
+        "issue": "Clothes Remain Wet",
+        "causes": "Blocked vent, malfunctioning moisture sensor, or weak heating element.",
+        "costs": [
+          "Vent cleaning: $100\u2013$200",
+          "Moisture sensor replacement: $120\u2013$250",
+          "Heating element repair: $150\u2013$300"
+        ]
+      },
+      {
+        "issue": "Burning Smell or Loud Noise",
+        "causes": "Lint buildup, worn drum rollers or bearings, damaged belt, or motor issues.",
+        "costs": [
+          "Lint cleaning (internal): $100\u2013$150",
+          "Drum roller/bearing replacement: $150\u2013$300",
+          "Drive belt replacement: $120\u2013$200",
+          "Motor replacement: $250\u2013$450"
+        ]
+      }
+    ],
+    "solutions": [
+      "Experienced dryer specialists",
+      "Genuine part replacement",
+      "Same-day appointments"
+    ]
+  },
+  "dishwasher repair": {
+    "title": "Dishwasher Repair",
+    "subtitle": "Reliable dishwasher fixes without delays",
+    "image": "https://example.com/images/dishwasher.jpg",
+    "problems": [
+      {
+        "issue": "Dishes Not Clean",
+        "causes": "Clogged spray arms, worn water inlet valve, malfunctioning circulation pump, or faulty detergent dispenser.",
+        "costs": [
+          "Spray arm cleaning or replacement: $80\u2013$150",
+          "Water inlet valve replacement: $120\u2013$250",
+          "Circulation pump replacement: $250\u2013$450",
+          "Detergent dispenser repair: $100\u2013$200"
+        ]
+      },
+      {
+        "issue": "Water Not Draining",
+        "causes": "Clogged drain hose, faulty drain pump, or blocked filter.",
+        "costs": [
+          "Drain hose cleaning/replacement: $100\u2013$200",
+          "Drain pump replacement: $150\u2013$300",
+          "Filter cleaning or replacement: $80\u2013$150"
+        ]
+      },
+      {
+        "issue": "Leaking or Unusual Noises",
+        "causes": "Worn door gasket, loose hose connection, cracked tub, or broken motor bearings.",
+        "costs": [
+          "Door gasket replacement: $100\u2013$200",
+          "Hose connection fix: $100\u2013$180",
+          "Tub repair: $150\u2013$300",
+          "Motor/bearing replacement: $250\u2013$450"
+        ]
+      }
+    ],
+    "solutions": [
+      "Certified and insured techs",
+      "Fixed pricing and warranty",
+      "All major brands supported"
+    ]
+  },
+  "oven repair": {
+    "title": "Oven Repair",
+    "subtitle": "Trusted oven repair with genuine parts",
+    "image": "https://example.com/images/oven.jpg",
+    "problems": [
+      {
+        "issue": "Oven Not Heating Evenly",
+        "causes": "Faulty bake or broil element, malfunctioning temperature sensor, or control board issues.",
+        "costs": [
+          "Bake/broil element replacement: $100\u2013$250",
+          "Temperature sensor replacement: $120\u2013$200",
+          "Control board replacement: $250\u2013$450",
+          "Calibration or wiring repair: $80\u2013$150"
+        ]
+      },
+      {
+        "issue": "Display Not Working",
+        "causes": "Defective control board, loose wiring, or failed display module.",
+        "costs": [
+          "Display module replacement: $200\u2013$350",
+          "Control board replacement: $250\u2013$450",
+          "Wiring repair: $100\u2013$200"
+        ]
+      },
+      {
+        "issue": "Gas Smell or Ignition Issues",
+        "causes": "Malfunctioning igniter, damaged gas valve, or broken safety valve.",
+        "costs": [
+          "Igniter replacement: $150\u2013$300",
+          "Gas valve replacement: $200\u2013$400",
+          "Safety valve replacement: $250\u2013$450",
+          "Gas leak inspection/service: $100\u2013$200"
+        ]
+      }
+    ],
+    "solutions": [
+      "Gas/electric oven experts",
+      "Safety-focused service",
+      "Same-day repair option"
+    ]
+  },
+  "cooktop repair": {
+    "title": "Cooktop Repair",
+    "subtitle": "Cooktop issues? We fix them fast and safe",
+    "image": "https://example.com/images/cooktop.jpg",
+    "problems": [
+      {
+        "issue": "Burners Not Igniting",
+        "causes": "Dirty or clogged igniter, faulty spark module, or broken ignition switch.",
+        "costs": [
+          "Igniter cleaning/replacement: $100\u2013$200",
+          "Spark module replacement: $150\u2013$300",
+          "Ignition switch replacement: $120\u2013$250"
+        ]
+      },
+      {
+        "issue": "Heating Element Not Working",
+        "causes": "Burned-out heating element, faulty switch, or control board failure.",
+        "costs": [
+          "Heating element replacement: $120\u2013$250",
+          "Switch replacement: $100\u2013$200",
+          "Control board replacement: $250\u2013$450"
+        ]
+      },
+      {
+        "issue": "Cracked Glass Top",
+        "causes": "Impact damage, thermal stress, or manufacturing defect.",
+        "costs": [
+          "Glass top replacement: $300\u2013$600+",
+          "Diagnostic and safety inspection: $80\u2013$150"
+        ]
+      }
+    ],
+    "solutions": [
+      "Electric and gas cooktop service",
+      "On-the-spot diagnostics",
+      "Warranty for all repairs"
+    ]
+  },
+  "microwave repair": {
+    "title": "Microwave Repair",
+    "subtitle": "Expert microwave repair at your convenience",
+    "image": "https://example.com/images/microwave.jpg",
+    "problems": [
+      {
+        "issue": "Microwave Not Heating",
+        "causes": "Failed magnetron, faulty diode, defective capacitor, or door switch malfunction.",
+        "costs": [
+          "Magnetron replacement: $150\u2013$350",
+          "Diode or capacitor replacement: $100\u2013$200",
+          "Door switch replacement: $100\u2013$180",
+          "Power system diagnosis: $80\u2013$150"
+        ]
+      },
+      {
+        "issue": "Sparks Inside",
+        "causes": "Damaged waveguide cover, metal object inside, or burnt food residue.",
+        "costs": [
+          "Waveguide cover replacement: $100\u2013$150",
+          "Interior cleaning & inspection: $80\u2013$120",
+          "Cavity or paint repair: $100\u2013$200"
+        ]
+      },
+      {
+        "issue": "Buttons Not Responding",
+        "causes": "Faulty control panel, damaged membrane switch, or control board failure.",
+        "costs": [
+          "Control panel replacement: $150\u2013$300",
+          "Membrane switch replacement: $120\u2013$200",
+          "Control board replacement: $200\u2013$400"
+        ]
+      }
+    ],
+    "solutions": [
+      "Quick turnarounds",
+      "Fixes for built-in or countertop models",
+      "Certified local technicians"
+    ]
+  },
+  "freezer repair": {
+    "title": "Freezer Repair",
+    "subtitle": "Keep your freezer cold \u2014 expert repair today",
+    "image": "https://example.com/images/freezer.jpg",
+    "problems": [
+      {
+        "issue": "Freezer Too Warm",
+        "causes": "Faulty thermostat, malfunctioning evaporator fan, or sealed system leak.",
+        "costs": [
+          "Thermostat replacement: $120\u2013$250",
+          "Evaporator fan motor replacement: $200\u2013$350",
+          "Sealed system repair: $400\u2013$800",
+          "Refrigerant leak detection: $150\u2013$300"
+        ]
+      },
+      {
+        "issue": "Frost Build-Up",
+        "causes": "Defective defrost heater, faulty defrost timer, or door seal failure.",
+        "costs": [
+          "Defrost heater replacement: $150\u2013$300",
+          "Defrost timer replacement: $100\u2013$200",
+          "Door gasket replacement: $120\u2013$250",
+          "Manual defrost and inspection: $80\u2013$150"
+        ]
+      },
+      {
+        "issue": "Weird Noises or Leaks",
+        "causes": "Worn fan motor, clogged drain tube, or cracked water line.",
+        "costs": [
+          "Fan motor replacement: $200\u2013$350",
+          "Drain tube cleaning or repair: $100\u2013$200",
+          "Water line repair: $140\u2013$300"
+        ]
+      }
+    ],
+    "solutions": [
+      "Fast diagnosis and repair",
+      "OEM parts used only",
+      "Emergency service available"
+    ]
+  },
+  "ice maker repair": {
+    "title": "Ice Maker Repair",
+    "subtitle": "No ice? We\u2019ll fix your ice maker today",
+    "image": "https://example.com/images/ice-maker.jpg",
+    "problems": [
+      {
+        "issue": "Not Making Ice",
+        "causes": "Clogged water line, faulty inlet valve, malfunctioning motor module, or thermostat failure.",
+        "costs": [
+          "Water line cleaning/repair: $100\u2013$250",
+          "Inlet valve replacement: $120\u2013$250",
+          "Ice maker module replacement: $200\u2013$400",
+          "Thermostat replacement: $120\u2013$200"
+        ]
+      },
+      {
+        "issue": "Ice Tastes or Smells Odd",
+        "causes": "Contaminated water filter, mold buildup, or stale ice.",
+        "costs": [
+          "Water filter replacement: $60\u2013$120",
+          "System cleaning/sanitization: $100\u2013$200",
+          "Ice maker flush and reset: $80\u2013$150"
+        ]
+      },
+      {
+        "issue": "Ice Stuck in Tray",
+        "causes": "Jammed ejector arm, weak motor, or temperature fluctuations.",
+        "costs": [
+          "Ejector arm repair: $100\u2013$200",
+          "Motor replacement: $200\u2013$350",
+          "Sensor calibration: $120\u2013$250"
+        ]
+      }
+    ],
+    "solutions": [
+      "Refrigerator and standalone models",
+      "Fast on-site service",
+      "Guaranteed parts and labor"
+    ]
+  },
+  "garbage disposal repair": {
+    "title": "Garbage Disposal Repair",
+    "subtitle": "Get your disposal running smoothly again",
+    "image": "https://example.com/images/garbage-disposal.jpg",
+    "problems": [
+      {
+        "issue": "Disposal Won\u2019t Turn On",
+        "causes": "Tripped reset button, electrical issue, or faulty motor.",
+        "costs": [
+          "Reset or inspection: $80\u2013$150",
+          "Wiring repair: $100\u2013$200",
+          "Motor replacement: $200\u2013$400",
+          "Full disposal replacement: $250\u2013$500"
+        ]
+      },
+      {
+        "issue": "Strange Grinding Noise",
+        "causes": "Foreign object, worn impellers, or damaged flywheel.",
+        "costs": [
+          "Object removal: $80\u2013$150",
+          "Impeller or flywheel repair: $150\u2013$300",
+          "Replacement installation: $250\u2013$500"
+        ]
+      },
+      {
+        "issue": "Bad Smell or Slow Drain",
+        "causes": "Food buildup, clogged drain line, or bacterial growth.",
+        "costs": [
+          "Cleaning and deodorizing: $80\u2013$150",
+          "Drain line cleaning: $100\u2013$200",
+          "Trap or pipe replacement: $150\u2013$300"
+        ]
+      }
+    ],
+    "solutions": [
+      "Quick jam removal",
+      "Safe motor replacements",
+      "Expert inspection & repair"
+    ]
+  },
+  "range hood repair": {
+    "title": "Range Hood Repair",
+    "subtitle": "Ventilation issues? We fix all range hoods",
+    "image": "https://example.com/images/range-hood.jpg",
+    "problems": [
+      {
+        "issue": "Fan Not Working",
+        "causes": "Faulty fan motor, broken switch, or control board failure.",
+        "costs": [
+          "Fan motor replacement: $150\u2013$300",
+          "Switch replacement: $100\u2013$200",
+          "Control board replacement: $200\u2013$400"
+        ]
+      },
+      {
+        "issue": "No Light",
+        "causes": "Burnt-out bulb, faulty socket, or electrical short.",
+        "costs": [
+          "Bulb/socket replacement: $80\u2013$150",
+          "Electrical repair: $100\u2013$200",
+          "Wiring inspection: $100\u2013$180"
+        ]
+      },
+      {
+        "issue": "Poor Suction or Strange Noise",
+        "causes": "Clogged filters, loose fan blades, or damaged ductwork.",
+        "costs": [
+          "Filter replacement: $80\u2013$150",
+          "Fan repair: $150\u2013$300",
+          "Ductwork inspection/repair: $200\u2013$400"
+        ]
+      }
+    ],
+    "solutions": [
+      "Wall, island, and under-cabinet models",
+      "Fan/motor/light repair",
+      "Complete safety check"
+    ]
+  },
+  "wine cooler repair": {
+    "title": "Wine Cooler Repair",
+    "subtitle": "Keep your wine at the perfect temperature",
+    "image": "https://example.com/images/wine-cooler.jpg",
+    "problems": [
+      {
+        "issue": "Cooler Not Cooling",
+        "causes": "Failed compressor, thermostat malfunction, or refrigerant leak.",
+        "costs": [
+          "Thermostat replacement: $120\u2013$250",
+          "Compressor replacement: $400\u2013$700",
+          "Refrigerant recharge/repair: $300\u2013$600"
+        ]
+      },
+      {
+        "issue": "Temperature Fluctuation",
+        "causes": "Faulty temperature sensor, control board issue, or door seal failure.",
+        "costs": [
+          "Temperature sensor replacement: $120\u2013$200",
+          "Control board replacement: $250\u2013$450",
+          "Door seal replacement: $100\u2013$200"
+        ]
+      },
+      {
+        "issue": "Lights or Display Issues",
+        "causes": "Burned-out LED, control panel failure, or wiring issue.",
+        "costs": [
+          "LED replacement: $80\u2013$150",
+          "Control panel replacement: $200\u2013$350",
+          "Wiring/fuse repair: $100\u2013$200"
+        ]
+      }
+    ],
+    "solutions": [
+      "Silent cooling repair",
+      "Temperature sensor replacement",
+      "High-end model support"
+    ]
+  }
+}
