@@ -215,6 +215,7 @@ author {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   border-radius: 0.5rem;
   padding: 1rem;
+  line-height: 1.4;
 }
 /* на обеих — отзывы и проблемы */
 .scroll-btn.left-reviews,
