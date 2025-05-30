@@ -44,7 +44,7 @@
   "washing machine repair": {
     "title": "Washing Machine Repair",
     "subtitle": "Fast and professional service you can trust in your area",
-    "image": "https://example.com/images/washing-machine.jpg",
+    "image": "https://appliance-landing.pages.dev/images/washer.webp",
     "problems": [
       {
         "issue": "Washer Won\u2019t Drain or Spin",
