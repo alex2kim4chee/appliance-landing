@@ -53,7 +53,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   if (matchedKey && data[matchedKey]) {
-    // —————————————————————————————————————————————————————————————————
     // Render specific service page
     const contentItem = data[matchedKey];
     const imageUrl = contentItem.image || 'default-hero.jpg';
@@ -75,9 +74,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       <section class="service-details">
         <h2>Common Problems</h2>
         <div class="problems-wrapper">
-          <button class="scroll-btn left-problems" aria-label="Scroll problems left">‹</button>
+          <button class="scroll-btn left-problems" aria-label="Scroll problems left">&lt;</button>
           <div id="problems-container" class="problems-container"></div>
-          <button class="scroll-btn right-problems" aria-label="Scroll problems right">›</button>
+          <button class="scroll-btn right-problems" aria-label="Scroll problems right">&gt;</button>
         </div>
         <h2>Why Choose Us</h2>
         <ul>
@@ -85,14 +84,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         </ul>
         <h2>Customer Reviews</h2>
         <div class="reviews-wrapper">
-          <button class="scroll-btn left-reviews" aria-label="Scroll reviews left">‹</button>
+          <button class="scroll-btn left-reviews" aria-label="Scroll reviews left">&lt;</button>
           <div id="reviews-container" class="reviews-container"></div>
-          <button class="scroll-btn right-reviews" aria-label="Scroll reviews right">›</button>
+          <button class="scroll-btn right-reviews" aria-label="Scroll reviews right">&gt;</button>
         </div>
       </section>
     `;
 
-    // Booking button popup (or replace with scroll behavior if desired)
+    // Booking button popup
     document.getElementById('book-btn').addEventListener('click', () => {
       window.open(
         'https://docs.google.com/forms/d/e/FORM_ID/viewform',
@@ -142,10 +141,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     } catch (err) {
       console.error('Failed to load reviews:', err);
     }
-    // —————————————————————————————————————————————————————————————————
 
   } else {
-    // —————————————————————————————————————————————————————————————————
     // Render default home page
     document.body.style.backgroundImage = '';
     renderDefault();
@@ -179,9 +176,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     servicesSection.innerHTML = `
       <h2>Our Services</h2>
       <div class="problems-wrapper services-wrapper">
-        <button class="scroll-btn left-services" aria-label="Scroll services left">‹</button>
+        <button class="scroll-btn left-services" aria-label="Scroll services left">&lt;</button>
         <div id="services-container" class="problems-container"></div>
-        <button class="scroll-btn right-services" aria-label="Scroll services right">›</button>
+        <button class="scroll-btn right-services" aria-label="Scroll services right">&gt;</button>
       </div>
     `;
     contentContainer.appendChild(servicesSection);
@@ -208,7 +205,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
       setupScrollButtons('#services-container', '.left-services', '.right-services');
     }
-    // —————————————————————————————————————————————————————————————————
   }
 });
 
@@ -238,9 +234,9 @@ function renderDefault() {
     <h1>Home Appliance Repair</h1>
     <p>We fix all types of appliances in ${document.getElementById('user-location')?.textContent || 'your area'}.</p>
     <div class="reviews-wrapper">
-      <button class="scroll-btn left-reviews" aria-label="Scroll reviews left">‹</button>
+      <button class="scroll-btn left-reviews" aria-label="Scroll reviews left">&lt;</button>
       <div id="reviews-container" class="reviews-container"></div>
-      <button class="scroll-btn right-reviews" aria-label="Scroll reviews right">›</button>
+      <button class="scroll-btn right-reviews" aria-label="Scroll reviews right">&gt;</button>
     </div>
   `;
 }
