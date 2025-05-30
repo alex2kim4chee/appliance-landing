@@ -2,7 +2,7 @@
   "refrigerator repair": {
     "title": "Refrigerator Repair",
     "subtitle": "Same-day technician visit in your area",
-    "image": "https://example.com/images/refrigerator.webp",
+    "image": "https://appliance-landing.pages.dev/images/refrigerator.webp",
     "problems": [
       {
         "issue": "Refrigerator Not Cooling",
