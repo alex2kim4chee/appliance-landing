@@ -219,20 +219,24 @@ author {
   padding: 1rem;
   line-height: 1.4;
 }
-/* на обеих — отзывы и проблемы */
+/* на обеих — отзывы, проблемы и Our Services */
 .scroll-btn.left-reviews,
-.scroll-btn.left-problems {
+.scroll-btn.left-problems,
+.scroll-btn.left-services {
   left: 0;
 }
 .scroll-btn.right-reviews,
-.scroll-btn.right-problems {
+.scroll-btn.right-problems,
+.scroll-btn.right-services {
   right: 0;
 }
 @media (max-width: 768px) {
   .scroll-btn.left-reviews,
   .scroll-btn.right-reviews,
   .scroll-btn.left-problems,
-  .scroll-btn.right-problems {
+  .scroll-btn.right-problems,
+  .scroll-btn.left-services,
+  .scroll-btn.right-services {
     display: none;
   }
 }
