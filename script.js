@@ -92,14 +92,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       </section>
     `;
 
-    // Smooth scroll to booking widget
-document.getElementById('book-btn').addEventListener('click', (e) => {
-  e.preventDefault();
-  const widget = document.getElementById('booking-widget');
-  if (widget) {
-    widget.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-});
+    // Setup booking button popup replaced later by scroll behavior
+    document.getElementById('book-btn').addEventListener('click', () => {
+      window.open(
+        'https://docs.google.com/forms/d/e/FORM_ID/viewform',
+        'appointment',
+        'width=600,height=800,menubar=no,toolbar=no'
+      );
+    });
 
     // Render Problems carousel
     const problemsContainer = document.getElementById('problems-container');
@@ -147,6 +147,29 @@ document.getElementById('book-btn').addEventListener('click', (e) => {
     // Reset body background if no match
     document.body.style.backgroundImage = '';
     renderDefault();
+    // ———————————————————————————————————————————————
+    // Load and render Reviews carousel in default view
+    try {
+      const revRes = await fetch('reviews.json');
+      const reviews = await revRes.json();
+      const reviewsContainer = document.getElementById('reviews-container');
+      if (reviewsContainer) {
+        reviewsContainer.innerHTML = '';
+        reviews.forEach(r => {
+          const card = document.createElement('div');
+          card.className = 'review-card';
+          card.innerHTML = `
+            <div class="text">${r.text}</div>
+            <div class="stars">${'★'.repeat(r.stars)}</div>
+            <div class="author">— ${r.author}</div>
+          `;
+          reviewsContainer.appendChild(card);
+        });
+        setupScrollButtons('#reviews-container', '.left-reviews', '.right-reviews');
+      }
+    } catch (err) {
+      console.error('Failed to load reviews:', err);
+    }
   }
 });
 
