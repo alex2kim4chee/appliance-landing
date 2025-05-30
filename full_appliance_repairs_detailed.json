@@ -127,7 +127,7 @@
   "dishwasher repair": {
     "title": "Dishwasher Repair",
     "subtitle": "Reliable dishwasher fixes without delays",
-    "image": "https://example.com/images/dishwasher.jpg",
+    "image": "https://appliance-landing.pages.dev/images/dishwasher.jpg",
     "problems": [
       {
         "issue": "Dishes Not Clean",
@@ -209,7 +209,7 @@
   "cooktop repair": {
     "title": "Cooktop Repair",
     "subtitle": "Cooktop issues? We fix them fast and safe",
-    "image": "https://example.com/images/cooktop.jpg",
+    "image": "https://appliance-landing.pages.dev/images/cooktop.jpg",
     "problems": [
       {
         "issue": "Burners Not Igniting",
@@ -247,7 +247,7 @@
   "microwave repair": {
     "title": "Microwave Repair",
     "subtitle": "Expert microwave repair at your convenience",
-    "image": "https://example.com/images/microwave.jpg",
+    "image": "https://appliance-landing.pages.dev/images/microwave.webp",
     "problems": [
       {
         "issue": "Microwave Not Heating",
@@ -287,7 +287,7 @@
   "freezer repair": {
     "title": "Freezer Repair",
     "subtitle": "Keep your freezer cold \u2014 expert repair today",
-    "image": "https://example.com/images/freezer.jpg",
+    "image": "https://appliance-landing.pages.dev/images/freezer.jpg",
     "problems": [
       {
         "issue": "Freezer Too Warm",
@@ -328,7 +328,7 @@
   "ice maker repair": {
     "title": "Ice Maker Repair",
     "subtitle": "No ice? We\u2019ll fix your ice maker today",
-    "image": "https://example.com/images/ice-maker.jpg",
+    "image": "https://appliance-landing.pages.dev/images/ice-maker.jpg",
     "problems": [
       {
         "issue": "Not Making Ice",
@@ -368,7 +368,7 @@
   "garbage disposal repair": {
     "title": "Garbage Disposal Repair",
     "subtitle": "Get your disposal running smoothly again",
-    "image": "https://example.com/images/garbage-disposal.jpg",
+    "image": "https://appliance-landing.pages.dev/images/garbage-disposal.jpg",
     "problems": [
       {
         "issue": "Disposal Won\u2019t Turn On",
@@ -408,7 +408,7 @@
   "range hood repair": {
     "title": "Range Hood Repair",
     "subtitle": "Ventilation issues? We fix all range hoods",
-    "image": "https://example.com/images/range-hood.jpg",
+    "image": "https://appliance-landing.pages.dev/images/range-hood.jpg",
     "problems": [
       {
         "issue": "Fan Not Working",
@@ -447,7 +447,7 @@
   "wine cooler repair": {
     "title": "Wine Cooler Repair",
     "subtitle": "Keep your wine at the perfect temperature",
-    "image": "https://example.com/images/wine-cooler.jpg",
+    "image": "https://appliance-landing.pages.dev/images/wine-cooler.jpg",
     "problems": [
       {
         "issue": "Cooler Not Cooling",
