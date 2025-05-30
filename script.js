@@ -146,30 +146,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     // Render default home page
     document.body.style.backgroundImage = '';
     renderDefault();
-
-    // Load and render Reviews carousel in default view
-    try {
-      const revRes = await fetch('reviews.json');
-      const reviews = await revRes.json();
-      const reviewsContainer = document.getElementById('reviews-container');
-      if (reviewsContainer) {
-        reviewsContainer.innerHTML = '';
-        reviews.forEach(r => {
-          const card = document.createElement('div');
-          card.className = 'review-card';
-          card.innerHTML = `
-            <div class="text">${r.text}</div>
-            <div class="stars">${'★'.repeat(r.stars)}</div>
-            <div class="author">— ${r.author}</div>
-          `;
-          reviewsContainer.appendChild(card);
-        });
-        setupScrollButtons('#reviews-container', '.left-reviews', '.right-reviews');
-      }
-    } catch (err) {
-      console.error('Failed to load reviews:', err);
-    }
-
+    
     // Our Services carousel
     const servicesSection = document.createElement('section');
     servicesSection.className = 'services-section';
@@ -204,6 +181,29 @@ document.addEventListener("DOMContentLoaded", async () => {
         servicesContainer.appendChild(card);
       });
       setupScrollButtons('#services-container', '.left-services', '.right-services');
+
+    // Load and render Reviews carousel in default view
+    try {
+      const revRes = await fetch('reviews.json');
+      const reviews = await revRes.json();
+      const reviewsContainer = document.getElementById('reviews-container');
+      if (reviewsContainer) {
+        reviewsContainer.innerHTML = '';
+        reviews.forEach(r => {
+          const card = document.createElement('div');
+          card.className = 'review-card';
+          card.innerHTML = `
+            <div class="text">${r.text}</div>
+            <div class="stars">${'★'.repeat(r.stars)}</div>
+            <div class="author">— ${r.author}</div>
+          `;
+          reviewsContainer.appendChild(card);
+        });
+        setupScrollButtons('#reviews-container', '.left-reviews', '.right-reviews');
+      }
+    } catch (err) {
+      console.error('Failed to load reviews:', err);
+    }
     }
   }
 });
