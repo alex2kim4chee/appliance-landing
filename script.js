@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       </section>
     `;
 
-    // Booking button scroll
+    // Smooth scroll to booking widget
     document.getElementById('book-btn').addEventListener('click', e => {
       e.preventDefault();
       const widget = document.getElementById('booking-widget');
@@ -110,9 +110,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         card.innerHTML = `
           <h3 class="issue">${p.issue}</h3>
           <p class="causes">${p.causes}</p>
-          <ul class="costs">
-            ${p.costs.map(c => `<li>${c}</li>`).join('')}
-          </ul>
+          <ul class="costs">${p.costs.map(c => `<li>${c}</li>`).join('')}</ul>
         `;
         problemsContainer.appendChild(card);
       });
@@ -147,29 +145,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     document.body.style.backgroundImage = '';
     renderDefault();
 
-    // Load and render Reviews carousel in default view
-    try {
-      const revRes = await fetch('reviews.json');
-      const reviews = await revRes.json();
-      const reviewsContainer = document.getElementById('reviews-container');
-      if (reviewsContainer) {
-        reviewsContainer.innerHTML = '';
-        reviews.forEach(r => {
-          const card = document.createElement('div');
-          card.className = 'review-card';
-          card.innerHTML = `
-            <div class="text">${r.text}</div>
-            <div class="stars">${'★'.repeat(r.stars)}</div>
-            <div class="author">— ${r.author}</div>
-          `;
-          reviewsContainer.appendChild(card);
-        });
-        setupScrollButtons('#reviews-container', '.left-reviews', '.right-reviews');
-      }
-    } catch (err) {
-      console.error('Failed to load reviews:', err);
-    }
-
     // Our Services carousel
     const servicesSection = document.createElement('section');
     servicesSection.className = 'services-section';
@@ -197,13 +172,34 @@ document.addEventListener("DOMContentLoaded", async () => {
         }).join('');
         card.innerHTML = `
           <h3>${item.title}</h3>
-          <ul class="costs">
-            ${listItems}
-          </ul>
+          <ul class="costs">${listItems}</ul>
         `;
         servicesContainer.appendChild(card);
       });
       setupScrollButtons('#services-container', '.left-services', '.right-services');
+    }
+
+    // Load and render Reviews carousel in default view
+    try {
+      const revRes = await fetch('reviews.json');
+      const reviews = await revRes.json();
+      const reviewsContainer = document.getElementById('reviews-container');
+      if (reviewsContainer) {
+        reviewsContainer.innerHTML = '';
+        reviews.forEach(r => {
+          const card = document.createElement('div');
+          card.className = 'review-card';
+          card.innerHTML = `
+            <div class="text">${r.text}</div>
+            <div class="stars">${'★'.repeat(r.stars)}</div>
+            <div class="author">— ${r.author}</div>
+          `;
+          reviewsContainer.appendChild(card);
+        });
+        setupScrollButtons('#reviews-container', '.left-reviews', '.right-reviews');
+      }
+    } catch (err) {
+      console.error('Failed to load reviews:', err);
     }
   }
 });
