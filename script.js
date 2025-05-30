@@ -173,38 +173,41 @@ document.addEventListener("DOMContentLoaded", async () => {
       console.error('Failed to load reviews:', err);
     }
 
-    // Add “Our Services” section with 3 top problems per service
+    // Our Services carousel
     const servicesSection = document.createElement('section');
     servicesSection.className = 'services-section';
     servicesSection.innerHTML = `
       <h2>Our Services</h2>
-      <div class="services-wrapper"></div>
+      <div class="problems-wrapper services-wrapper">
+        <button class="scroll-btn left-services" aria-label="Scroll services left">‹</button>
+        <div id="services-container" class="problems-container"></div>
+        <button class="scroll-btn right-services" aria-label="Scroll services right">›</button>
+      </div>
     `;
     contentContainer.appendChild(servicesSection);
 
-    const wrapper = servicesSection.querySelector('.services-wrapper');
-    Object.keys(keyAliases).forEach(key => {
-      const item = data[key];
-      if (!item || !Array.isArray(item.problems)) return;
-      const card = document.createElement('div');
-      card.className = 'problem-card';
-      const listItems = item.problems
-        .slice(0, 3)
-        .map(p => {
-          const price = Array.isArray(p.costs) && p.costs.length
-            ? p.costs[0]
-            : '';
+    const servicesContainer = document.getElementById('services-container');
+    if (servicesContainer) {
+      servicesContainer.innerHTML = '';
+      Object.keys(keyAliases).forEach(key => {
+        const item = data[key];
+        if (!item || !Array.isArray(item.problems)) return;
+        const card = document.createElement('div');
+        card.className = 'problem-card';
+        const listItems = item.problems.slice(0, 3).map(p => {
+          const price = Array.isArray(p.costs) && p.costs.length ? p.costs[0] : '';
           return `<li><strong>${p.issue}</strong>: ${price}</li>`;
-        })
-        .join('');
-      card.innerHTML = `
-        <h3>${item.title}</h3>
-        <ul class="costs">
-          ${listItems}
-        </ul>
-      `;
-      wrapper.appendChild(card);
-    });
+        }).join('');
+        card.innerHTML = `
+          <h3>${item.title}</h3>
+          <ul class="costs">
+            ${listItems}
+          </ul>
+        `;
+        servicesContainer.appendChild(card);
+      });
+      setupScrollButtons('#services-container', '.left-services', '.right-services');
+    }
     // —————————————————————————————————————————————————————————————————
   }
 });
