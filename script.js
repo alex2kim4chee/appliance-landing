@@ -46,24 +46,24 @@ document.addEventListener("DOMContentLoaded", async () => {
   const contentContainer = document.getElementById('dynamic-content');
   let matchedKey = null;
   for (const contentKey in keyAliases) {
-    if (keyAliases[contentKey].some(alias => new RegExp(`\\b${alias}\\b`).test(kw))) {
+    if (keyAliases[contentKey].some(alias => new RegExp(`\\b${alias}\\b`, 'i').test(kw))) {
       matchedKey = contentKey;
       break;
     }
   }
 
   if (matchedKey && data[matchedKey]) {
+    // —————————————————————————————————————————————————————————————————
+    // Render specific service page
     const contentItem = data[matchedKey];
     const imageUrl = contentItem.image || 'default-hero.jpg';
 
-    // Set body background
     document.body.style.backgroundImage = `url('${imageUrl}')`;
     document.body.style.backgroundSize = 'cover';
     document.body.style.backgroundPosition = 'center';
     document.body.style.backgroundRepeat = 'no-repeat';
     document.body.style.backgroundAttachment = 'fixed';
 
-    // Render Hero section and service details with carousel wrappers
     contentContainer.innerHTML = `
       <section class="hero">
         <div class="hero-overlay">
@@ -75,9 +75,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       <section class="service-details">
         <h2>Common Problems</h2>
         <div class="problems-wrapper">
-          <button class="scroll-btn left-problems" aria-label="Scroll problems left">&lt;</button>
+          <button class="scroll-btn left-problems" aria-label="Scroll problems left">‹</button>
           <div id="problems-container" class="problems-container"></div>
-          <button class="scroll-btn right-problems" aria-label="Scroll problems right">&gt;</button>
+          <button class="scroll-btn right-problems" aria-label="Scroll problems right">›</button>
         </div>
         <h2>Why Choose Us</h2>
         <ul>
@@ -85,14 +85,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         </ul>
         <h2>Customer Reviews</h2>
         <div class="reviews-wrapper">
-          <button class="scroll-btn left-reviews" aria-label="Scroll reviews left">&lt;</button>
+          <button class="scroll-btn left-reviews" aria-label="Scroll reviews left">‹</button>
           <div id="reviews-container" class="reviews-container"></div>
-          <button class="scroll-btn right-reviews" aria-label="Scroll reviews right">&gt;</button>
+          <button class="scroll-btn right-reviews" aria-label="Scroll reviews right">›</button>
         </div>
       </section>
     `;
 
-    // Setup booking button popup replaced later by scroll behavior
+    // Booking button popup (or replace with scroll behavior if desired)
     document.getElementById('book-btn').addEventListener('click', () => {
       window.open(
         'https://docs.google.com/forms/d/e/FORM_ID/viewform',
@@ -142,12 +142,14 @@ document.addEventListener("DOMContentLoaded", async () => {
     } catch (err) {
       console.error('Failed to load reviews:', err);
     }
+    // —————————————————————————————————————————————————————————————————
 
   } else {
-    // Reset body background if no match
+    // —————————————————————————————————————————————————————————————————
+    // Render default home page
     document.body.style.backgroundImage = '';
     renderDefault();
-    // ———————————————————————————————————————————————
+
     // Load and render Reviews carousel in default view
     try {
       const revRes = await fetch('reviews.json');
@@ -170,14 +172,45 @@ document.addEventListener("DOMContentLoaded", async () => {
     } catch (err) {
       console.error('Failed to load reviews:', err);
     }
+
+    // Add “Our Services” section with 3 top problems per service
+    const servicesSection = document.createElement('section');
+    servicesSection.className = 'services-section';
+    servicesSection.innerHTML = `
+      <h2>Our Services</h2>
+      <div class="services-wrapper"></div>
+    `;
+    contentContainer.appendChild(servicesSection);
+
+    const wrapper = servicesSection.querySelector('.services-wrapper');
+    Object.keys(keyAliases).forEach(key => {
+      const item = data[key];
+      if (!item || !Array.isArray(item.problems)) return;
+      const card = document.createElement('div');
+      card.className = 'problem-card';
+      const listItems = item.problems
+        .slice(0, 3)
+        .map(p => {
+          const price = Array.isArray(p.costs) && p.costs.length
+            ? p.costs[0]
+            : '';
+          return `<li><strong>${p.issue}</strong>: ${price}</li>`;
+        })
+        .join('');
+      card.innerHTML = `
+        <h3>${item.title}</h3>
+        <ul class="costs">
+          ${listItems}
+        </ul>
+      `;
+      wrapper.appendChild(card);
+    });
+    // —————————————————————————————————————————————————————————————————
   }
 });
 
 /**
  * Universal function to wire up horizontal scrolling buttons
- * @param {string} containerSelector - selector for the scroll container
- * @param {string} leftBtnSelector - selector for the left scroll button
- * @param {string} rightBtnSelector - selector for the right scroll button
  */
 function setupScrollButtons(containerSelector, leftBtnSelector, rightBtnSelector) {
   const container = document.querySelector(containerSelector);
@@ -193,16 +226,18 @@ function setupScrollButtons(containerSelector, leftBtnSelector, rightBtnSelector
   });
 }
 
-// Default render if no specific appliance key matched
+/**
+ * Default render if no specific appliance key matched
+ */
 function renderDefault() {
   const contentContainer = document.getElementById('dynamic-content');
   contentContainer.innerHTML = `
     <h1>Home Appliance Repair</h1>
     <p>We fix all types of appliances in ${document.getElementById('user-location')?.textContent || 'your area'}.</p>
     <div class="reviews-wrapper">
-      <button class="scroll-btn left-reviews" aria-label="Scroll reviews left">&lt;</button>
+      <button class="scroll-btn left-reviews" aria-label="Scroll reviews left">‹</button>
       <div id="reviews-container" class="reviews-container"></div>
-      <button class="scroll-btn right-reviews" aria-label="Scroll reviews right">&gt;</button>
+      <button class="scroll-btn right-reviews" aria-label="Scroll reviews right">›</button>
     </div>
   `;
 }
