@@ -168,7 +168,7 @@
   "oven repair": {
     "title": "Oven Repair",
     "subtitle": "Trusted oven repair with genuine parts",
-    "image": "https://example.com/images/oven.jpg",
+    "image": "https://appliance-landing.pages.dev/images/oven.webp",
     "problems": [
       {
         "issue": "Oven Not Heating Evenly",
