@@ -209,7 +209,7 @@
   "cooktop repair": {
     "title": "Cooktop Repair",
     "subtitle": "Cooktop issues? We fix them fast and safe",
-    "image": "https://appliance-landing.pages.dev/images/cooktop.jpg",
+    "image": "https://appliance-landing.pages.dev/images/cooktop.webp",
     "problems": [
       {
         "issue": "Burners Not Igniting",
