@@ -91,13 +91,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       </section>
     `;
 
-    // Booking button popup
-    document.getElementById('book-btn').addEventListener('click', () => {
-      window.open(
-        'https://docs.google.com/forms/d/e/FORM_ID/viewform',
-        'appointment',
-        'width=600,height=800,menubar=no,toolbar=no'
-      );
+    // Booking button scroll
+    document.getElementById('book-btn').addEventListener('click', e => {
+      e.preventDefault();
+      const widget = document.getElementById('booking-widget');
+      if (widget) {
+        widget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
 
     // Render Problems carousel
