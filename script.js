@@ -140,7 +140,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   } else {
     // — Default home page with Services first, then Reviews —
-    document.body.style.backgroundImage = '';
+  document.body.style.backgroundImage = "url('/images/appliance-home-page.webp')";
+  document.body.style.backgroundSize = 'cover';
+  document.body.style.backgroundPosition = 'center';
+  document.body.style.backgroundRepeat = 'no-repeat';
+  document.body.style.backgroundAttachment = 'fixed';
     renderDefault();
 
     // Detach the reviews wrapper so we can reinsert it below Services
